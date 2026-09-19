@@ -1,0 +1,176 @@
+HATTON SHIELD SOURCE-AVAILABLE LICENSE
+Version 1.0 — 2026
+
+Copyright (c) 2026 Peotic Wolf / Kiaroni Systems
+All rights reserved except as expressly granted below.
+
+1. PURPOSE
+
+Hatton Shield is made publicly viewable so people can inspect how it works,
+review it for privacy and security, and use the official software without
+having to pay for access.
+
+This is a source-available license. It is not an OSI-approved open-source
+license.
+
+2. PERMISSION TO USE
+
+You may download, install, and use official Hatton Shield releases free of
+charge.
+
+You may use Hatton Shield for personal, educational, research, nonprofit, and
+internal organizational use, including internal use by a business or other
+commercial organization.
+
+You may not charge users for access to Hatton Shield itself.
+
+3. PERMISSION TO INSPECT
+
+You may read, inspect, study, and audit the publicly available source code.
+
+You may make local copies of the source code for review, testing, security
+research, backup, and other private non-distribution purposes.
+
+4. PRIVATE MODIFICATION
+
+You may modify the source code privately for:
+
+- personal experimentation;
+- compatibility testing;
+- debugging;
+- accessibility work;
+- security research;
+- internal organizational evaluation.
+
+Private modifications may not be published, distributed, sold, sublicensed,
+or presented as an official Hatton Shield release without prior written
+permission from the copyright holder.
+
+5. REDISTRIBUTION
+
+Except where GitHub or another hosting service itself provides platform-level
+copying or forking rights under its own terms, you may not redistribute,
+mirror, republish, upload, bundle, or provide copies of Hatton Shield source
+code, release archives, modified builds, or derivative versions without prior
+written permission from the copyright holder.
+
+You may freely share links to the official Hatton Shield repository and
+official Hatton Shield release pages.
+
+A platform-provided fork or copy does not grant any additional rights to use,
+modify, redistribute, sell, sublicense, rebrand, or commercialize Hatton
+Shield beyond the rights expressly granted by this License.
+
+6. NO RESALE OR PAID GATING
+
+You may not:
+
+- sell Hatton Shield;
+- place Hatton Shield behind a subscription or paywall;
+- charge a licence fee for Hatton Shield;
+- charge for access to Hatton Shield's core functionality;
+- bundle Hatton Shield into a paid product or service for the purpose of
+  monetizing Hatton Shield itself;
+- resell or commercially redistribute official or modified Hatton Shield
+  builds.
+
+Optional donations, sponsorships, or voluntary support for the original
+Hatton Shield project do not violate this section.
+
+7. NO REBRANDING OR FALSE AUTHORSHIP
+
+You may not:
+
+- remove or alter copyright or licence notices;
+- claim Hatton Shield or substantial portions of it as your own original work;
+- rename or rebrand Hatton Shield and distribute it as a separate product;
+- use the names "Hatton Shield", "Kiaroni Systems", or "Peotic Wolf" in a way
+  that suggests endorsement, sponsorship, or official status without written
+  permission.
+
+8. SECURITY RESEARCH
+
+Good-faith security review, testing, and vulnerability research are permitted
+when carried out lawfully and without harming other users, systems, or data.
+
+Security findings should be reported responsibly to the project owner before
+public disclosure when practical.
+
+This permission does not authorize unauthorized access to third-party systems,
+accounts, devices, or data.
+
+9. CONTRIBUTIONS
+
+Unless a separate written agreement states otherwise, code or other material
+intentionally submitted to the official Hatton Shield repository as a
+contribution may be incorporated into Hatton Shield and distributed under
+this License.
+
+By submitting a contribution, you confirm that you have the right to submit
+it under these terms.
+
+10. OFFICIAL RELEASES
+
+Only releases published by the copyright holder through official Hatton Shield
+channels may be represented as official Hatton Shield releases.
+
+Modified, unofficial, experimental, or third-party builds must not be
+presented as official.
+
+11. TERMINATION
+
+Your rights under this License automatically terminate if you materially
+violate its terms.
+
+If the violation is corrected, the copyright holder may choose to restore
+permission in writing.
+
+12. NO WARRANTY
+
+HATTON SHIELD IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR UNINTERRUPTED
+OPERATION.
+
+YOU USE THE SOFTWARE AT YOUR OWN RISK.
+
+13. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER AND CONTRIBUTORS
+WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF, INABILITY TO USE, OR
+DISTRIBUTION OF HATTON SHIELD.
+
+14. RIGHTS NOT GRANTED
+
+Any right not expressly granted by this License is reserved by the copyright
+holder.
+
+15. CONTACT / PERMISSION
+
+If you want permission to redistribute, publish modified builds, integrate
+Hatton Shield into another distributed product, or use it in a way not
+covered above, contact the copyright holder and obtain written permission
+first.
+
+---
+
+Summary (informational only):
+
+You can:
+- use Hatton Shield for free;
+- inspect and audit the source;
+- make private modifications;
+- perform good-faith security research;
+- share links to the official project.
+
+You cannot, without permission:
+- sell it;
+- put it behind a paywall;
+- redistribute copies or modified builds;
+- rebrand it;
+- claim it as your own;
+- remove copyright or licence notices.
+
+The full licence text above controls if there is any conflict with this
+summary.
