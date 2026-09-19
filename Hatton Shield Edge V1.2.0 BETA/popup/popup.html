@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hatton Shield</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<main class="panel">
+  <header class="topbar">
+    <div class="brand"><div class="rotary-mark" aria-hidden="true"><i></i><i></i><i></i></div><div><b>Hatton Shield</b><small>by Kiaroni</small></div></div>
+    <label class="power" title="Protection"><input id="enabled" type="checkbox" aria-label="Protection"><span></span></label>
+  </header>
+
+  <section class="status-card" aria-live="polite">
+    <div class="status-ring"><div><span>PROTECTION</span><strong id="status">ON</strong></div></div>
+    <div class="status-copy"><b id="statusTitle">Protection Active</b><span id="statusText">Local filtering on this device.</span><small>No tracking · No cloud classifier</small></div>
+  </section>
+
+  <section class="mode-section" aria-label="Protection mode">
+    <div class="section-heading"><b>Protection mode</b><small>Zero-AI</small></div>
+    <div class="zero-mode"><span class="mode-icon infinity" aria-hidden="true">∞</span><div><b>ZERO-AI</b><small>Blocks explicit AI-generated content and explicit AI-focused tools, services and topics.</small></div></div>
+  </section>
+
+  <details class="controls"><summary><span>Filtering options</span><span class="chev">⌄</span></summary><div class="controls-body">
+    <label class="row"><span>AI-generated/content results</span><input id="aiContent" type="checkbox"></label>
+    <label class="row"><span>AI/synthetic-media labels</span><input id="aiLabels" type="checkbox"></label>
+    <label class="row"><span>AI-generation promotions</span><input id="aiPromotion" type="checkbox"></label>
+    <label class="row"><span>High-risk scam claims</span><input id="scamClaims" type="checkbox"></label>
+    <label class="row"><span>Show placeholders</span><input id="explain" type="checkbox"></label>
+    <div class="field"><span>Social filtering</span><small>Bounded local filtering on supported feeds</small></div>
+    <label class="row"><span>YouTube</span><input id="socialYoutube" type="checkbox"></label>
+    <label class="row"><span>TikTok</span><input id="socialTiktok" type="checkbox"></label>
+    <label class="row"><span>Instagram</span><input id="socialInstagram" type="checkbox"></label>
+    <label class="row"><span>Facebook</span><input id="socialFacebook" type="checkbox"></label>
+    <label class="row"><span>Threads</span><input id="socialThreads" type="checkbox"></label>
+    <label class="row"><span>X / Twitter</span><input id="socialX" type="checkbox"></label>
+    <label class="row"><span>Reddit</span><input id="socialReddit" type="checkbox"></label>
+    <label class="row"><span>LinkedIn</span><input id="socialLinkedin" type="checkbox"></label>
+    <label class="row"><span>Twitch</span><input id="socialTwitch" type="checkbox"></label>
+    <label class="row"><span>Discord Web</span><input id="socialDiscord" type="checkbox"></label>
+    <label class="row"><span>Pinterest</span><input id="socialPinterest" type="checkbox"></label>
+    <label class="row"><span>Bluesky</span><input id="socialBluesky" type="checkbox"></label>
+    <label class="row"><span>Mastodon</span><input id="socialMastodon" type="checkbox"></label>
+    <label class="row"><span>Tumblr</span><input id="socialTumblr" type="checkbox"></label>
+    <div class="field"><span>AI-site blocking</span><small>Optional. Off by default so AI services such as ChatGPT remain usable.</small></div>
+    <label class="row"><span>Block known AI-service sites</span><input id="aiSiteBlock" type="checkbox"></label>
+    <label class="field"><span>Placeholder style</span><select id="placeholderTreatment"><option value="blur">Blur — obscured preview</option><option value="shield">Shield — hide completely</option></select></label>
+    <label class="field"><span>Placeholder density</span><select id="placeholderDensity"><option value="normal">Normal</option><option value="minimal">Minimal</option><option value="clean">Clean — compact tiles</option></select></label>
+    <label class="field"><span>Placeholder detail</span><select id="placeholderMode"><option value="minimal">Minimal — Hidden by Hatton Shield</option><option value="compact">Compact — category only</option></select></label>
+    <label class="field"><span>Muted words</span><textarea id="words" placeholder="One phrase per line" maxlength="4000"></textarea></label>
+  </div></details>
+
+  <footer><button id="save" class="save" type="button">Save changes</button><p>PRIVATE <i>·</i> LOCAL <i>·</i> REVERSIBLE</p></footer>
+</main><script src="../compat/chromium-api.js"></script><script src="popup.js"></script></body></html>

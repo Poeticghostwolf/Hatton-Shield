@@ -1,0 +1,111 @@
+/* Rotary V1.9 adaptive eye-slash placeholders.
+   Site chrome must always win the stacking order: placeholders stay inside their card. */
+.rotary-hidden-card{position:relative!important;z-index:auto!important;min-width:150px!important;min-height:58px!important;overflow:hidden!important;box-sizing:border-box!important;isolation:isolate!important}
+.rotary-hidden-card>*:not(.rotary-shield-note){visibility:hidden!important}
+.rotary-hidden-card.rotary-treatment-blur>*:not(.rotary-shield-note){visibility:visible!important;filter:blur(24px)!important;opacity:.58!important;transform:scale(1.025)!important;pointer-events:none!important;user-select:none!important}
+.rotary-shield-note{
+ all:initial!important;visibility:visible!important;position:absolute!important;inset:0!important;z-index:1!important;
+ box-sizing:border-box!important;display:flex!important;flex-direction:row!important;gap:9px!important;align-items:center!important;justify-content:center!important;
+ padding:9px 11px!important;min-width:150px!important;min-height:58px!important;
+ background:color-mix(in srgb,#10151d 92%,transparent)!important;color:#f2f5f8!important;
+ border:1px solid #46566a!important;border-radius:10px!important;font:600 12px/1.3 system-ui,sans-serif!important;
+ overflow:hidden!important;transform:none!important;rotate:none!important;scale:none!important;translate:none!important;writing-mode:horizontal-tb!important;text-orientation:mixed!important;direction:ltr!important;unicode-bidi:isolate!important;
+ white-space:normal!important;letter-spacing:normal!important;word-spacing:normal!important;text-transform:none!important;filter:none!important;perspective:none!important;clip-path:none!important;opacity:1!important;
+ backdrop-filter:blur(8px)!important;
+}
+.rotary-treatment-blur>.rotary-shield-note{background:color-mix(in srgb,#10151d 24%,transparent)!important;backdrop-filter:blur(3px)!important;border-color:color-mix(in srgb,#dce7f2 34%,transparent)!important;text-shadow:0 1px 3px #000!important}
+.rotary-eye-icon{all:initial!important;display:block!important;flex:0 0 22px!important;width:22px!important;height:22px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important;color:#dce7f2!important}
+.rotary-note-text{all:initial!important;display:block!important;min-width:0!important;max-width:220px!important;white-space:normal!important;overflow:hidden!important;text-overflow:ellipsis!important;overflow-wrap:anywhere!important;color:#f2f5f8!important;font:600 12px/1.3 system-ui,sans-serif!important;direction:ltr!important;writing-mode:horizontal-tb!important;transform:none!important}
+.rotary-shield-note button{all:initial!important;display:inline-block!important;flex:0 0 auto!important;margin:0!important;padding:5px 9px!important;border:1px solid #7c8da3!important;background:#182331!important;color:#fff!important;border-radius:999px!important;cursor:pointer!important;font:600 12px/1.3 system-ui,sans-serif!important;direction:ltr!important;writing-mode:horizontal-tb!important;transform:none!important}
+.rotary-shield-note button:hover{background:#223246!important}.rotary-shield-note button:focus-visible{outline:2px solid currentColor!important;outline-offset:2px!important}
+/* Compact/mobile tile */
+.rotary-hidden-card.rotary-inline-hidden{min-width:112px!important;min-height:38px!important;display:inline-block!important;vertical-align:middle!important}
+.rotary-hidden-card.rotary-inline-hidden>.rotary-shield-note{min-width:112px!important;min-height:38px!important;padding:4px 6px!important;gap:5px!important;border-radius:8px!important}
+.rotary-hidden-card.rotary-inline-hidden>.rotary-shield-note .rotary-eye-icon{width:16px!important;height:16px!important;flex-basis:16px!important}
+.rotary-hidden-card.rotary-inline-hidden>.rotary-shield-note .rotary-note-text{font-size:11px!important;line-height:1.2!important;max-width:90px!important}
+.rotary-hidden-card.rotary-inline-hidden>.rotary-shield-note button{padding:4px 7px!important;font-size:11px!important}
+/* Density controls. Minimal keeps geometry but quiets the treatment. */
+.rotary-density-minimal>.rotary-shield-note .rotary-note-text{display:none!important}.rotary-density-minimal>.rotary-shield-note{gap:7px!important;background:#10151de8!important}
+/* Clean intentionally collapses blocked result cards; reversible via Show. */
+.rotary-hidden-card.rotary-density-clean{height:46px!important;min-height:46px!important;max-height:46px!important}
+.rotary-density-clean>.rotary-shield-note{min-height:46px!important;padding:5px 8px!important;border-radius:8px!important}
+.rotary-density-clean>.rotary-shield-note .rotary-note-text{font-size:11px!important;max-width:130px!important}
+/* Sticky/header integrity: Rotary UI never establishes a viewport-level stacking layer. */
+.rotary-hidden-card,.rotary-shield-note{contain:paint!important}
+@media (max-width:520px){.rotary-note-text{max-width:120px!important}.rotary-shield-note{gap:6px!important;padding:6px 7px!important}.rotary-eye-icon{width:18px!important;height:18px!important;flex-basis:18px!important}.rotary-shield-note button{padding:4px 7px!important}}
+@media (prefers-reduced-transparency:reduce){.rotary-shield-note,.rotary-treatment-blur>.rotary-shield-note{backdrop-filter:none!important;background:#10151d!important}}
+/* V2.2 placeholder geometry: preserve image masonry slots, collapse linear web/video results. */
+.rotary-hidden-card.rotary-surface-videos,
+.rotary-hidden-card.rotary-surface-search{
+  height:72px!important;min-height:72px!important;max-height:72px!important;
+  width:min(100%,760px)!important;max-width:760px!important;
+  margin-block:8px!important;
+}
+.rotary-hidden-card.rotary-surface-videos>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-search>.rotary-shield-note{min-height:72px!important;border-radius:9px!important}
+.rotary-hidden-card.rotary-surface-images{max-height:none!important}
+
+/* V2.3 placeholder sanitation: suppress native result controls that can survive Google
+   container replacement. Rotary's own Show control remains visible and interactive. */
+.rotary-hidden-card>button:not([data-rotary-ui]),
+.rotary-hidden-card>[role="button"]:not(.rotary-shield-note),
+.rotary-hidden-card [aria-label*="More"]:not(.rotary-shield-note *),
+.rotary-hidden-card [aria-label*="About this result"]:not(.rotary-shield-note *){visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+.rotary-hidden-card>.rotary-shield-note,.rotary-hidden-card>.rotary-shield-note *{visibility:visible!important;opacity:1!important}
+
+/* V1.1.1 blurred-media treatment: preserve the original card geometry like mainstream sensitive-media covers. */
+.rotary-hidden-card.rotary-treatment-blur.rotary-density-clean{height:auto!important;min-height:58px!important;max-height:none!important}
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-images{min-height:120px!important}
+
+
+/* V1.1.17: pending evaluation has no visual treatment. This avoids page-wide
+   washout/flicker on dynamic search engines while the priority queue evaluates cards. */
+
+/* V1.1.19 performance: cards well outside the viewport do not keep expensive blur/backdrop
+   compositor surfaces alive. The normal blur treatment is restored before they approach view. */
+.rotary-hidden-card.rotary-treatment-blur.rotary-offscreen-hidden>*:not(.rotary-shield-note){visibility:hidden!important;filter:none!important;opacity:0!important;transform:none!important}
+.rotary-hidden-card.rotary-offscreen-hidden>.rotary-shield-note{backdrop-filter:none!important}
+
+
+/* V1.1.24 social-feed performance / flicker preservation.
+   Real Gaussian blur/backdrop-filter surfaces are expensive on continuously recycled
+   video feeds. Keep the Blur setting visually soft, but use a compositor-safe cover
+   on dynamic social/video results so scrolling does not repeatedly allocate and
+   tear down blurred layers. Image-search surfaces retain the existing blur treatment. */
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-youtube>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-tiktok>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-instagram>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-facebook>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-threads>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-x>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-reddit>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-linkedin>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-twitch>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-discord>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-pinterest>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-bluesky>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-mastodon>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-tumblr>*:not(.rotary-shield-note),
+.rotary-hidden-card.rotary-treatment-blur.rotary-surface-videos>*:not(.rotary-shield-note){
+  visibility:hidden!important;filter:none!important;opacity:0!important;transform:none!important;
+}
+.rotary-hidden-card.rotary-surface-youtube>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-tiktok>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-instagram>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-facebook>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-threads>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-x>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-reddit>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-linkedin>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-twitch>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-discord>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-pinterest>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-bluesky>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-mastodon>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-tumblr>.rotary-shield-note,
+.rotary-hidden-card.rotary-surface-videos>.rotary-shield-note{
+  backdrop-filter:none!important;background:color-mix(in srgb,#10151d 94%,transparent)!important;text-shadow:none!important;
+}
+/* The placeholder itself never needs a backdrop blur: the underlying media is already
+   concealed/blurred. Removing this extra filter cuts one compositor surface per card. */
+.rotary-shield-note{backdrop-filter:none!important}
