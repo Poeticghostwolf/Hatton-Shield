@@ -1,0 +1,82 @@
+{
+  "manifest_version": 3,
+  "name": "Hatton Shield \u2014 Firefox",
+  "version": "1.2.0",
+  "description": "Hatton Shield Firefox beta: local-first Zero-AI filtering with V1.1.26 evidence foundation, expanded search/social coverage, privacy hardening, and low-I/O flicker-resistant feeds.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "type": "classic"
+  },
+  "action": {
+    "default_title": "Hatton Shield",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/hatton-shield-16.png",
+      "32": "icons/hatton-shield-32.png",
+      "48": "icons/hatton-shield-48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content/site-guard-rules.js",
+        "content/site-guard.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content/rotary-core.js",
+        "content/rotary-trust.js",
+        "content/rotary-guard.js",
+        "content/rotary-gaia.js",
+        "content/search-engine-rules.js",
+        "content/social-hashtag-organ.js",
+        "content/social-phrase-organ.js",
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rotary-content-shield@kiaroni.local",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {}
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; connect-src 'none'"
+  },
+  "icons": {
+    "16": "icons/hatton-shield-16.png",
+    "32": "icons/hatton-shield-32.png",
+    "48": "icons/hatton-shield-48.png",
+    "128": "icons/hatton-shield-128.png"
+  }
+}
